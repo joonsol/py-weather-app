@@ -1,9 +1,14 @@
 import matplotlib
 import streamlit as st
 import matplotlib.pyplot as plt
-
 from weather_util import fetch_weather
-matplotlib.rcParams['font.family'] = 'DejaVu Sans'  # 리눅스 호환 폰트
+
+import matplotlib.font_manager as fm
+import os
+
+font_path = os.path.join("fonts", "NanumGothic.ttf")
+font_name = fm.FontProperties(fname=font_path).get_name()
+matplotlib.rcParams['font.family'] = font_name
 matplotlib.rcParams['axes.unicode_minus'] = False
 
 

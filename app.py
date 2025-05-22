@@ -1,8 +1,10 @@
 import matplotlib
 import streamlit as st
 import matplotlib.pyplot as plt
-matplotlib.rcParams['font.family'] = 'Malgun Gothic'  # Windows용
+
 from weather_util import fetch_weather
+matplotlib.rcParams['font.family'] = 'DejaVu Sans'  # 리눅스 호환 폰트
+matplotlib.rcParams['axes.unicode_minus'] = False
 
 
 api_key =st.secrets["api_key"]
